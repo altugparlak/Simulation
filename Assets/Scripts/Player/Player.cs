@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class Player : SingletonMonobehaviour<Player>
 {
-    [SerializeField] private float playerMovementSpeed = 1f;
     [SerializeField] private Animator arm_animator;
     [SerializeField] private Animator body_animator;
     [SerializeField] private Animator hair_animator;
 
+    private static string PlayerTurningState;
     private float decidedMovementSpeed;
     CharacterController characterController;
     Rigidbody2D rb;
@@ -18,7 +18,8 @@ public class Player : SingletonMonobehaviour<Player>
         characterController = GetComponent<CharacterController>();
         rb = GetComponent<Rigidbody2D>();
 
-        decidedMovementSpeed = playerMovementSpeed;
+        decidedMovementSpeed = Settings.walkingSpeed;
+        PlayerTurningState = Settings.TurningState;
     }
 
     void Update()
@@ -41,47 +42,47 @@ public class Player : SingletonMonobehaviour<Player>
             if (moveHorizontal < 0)
             {
                 //Left
-                body_animator.SetInteger("TurningState", 1);
-                arm_animator.SetInteger("TurningState", 1);
-                hair_animator.SetInteger("TurningState", 1);
+                body_animator.SetInteger(PlayerTurningState, 1);
+                arm_animator.SetInteger(PlayerTurningState, 1);
+                hair_animator.SetInteger(PlayerTurningState, 1);
             }
             else if (moveHorizontal > 0)
             {
                 //Right
-                body_animator.SetInteger("TurningState", 3);
-                arm_animator.SetInteger("TurningState", 3);
-                hair_animator.SetInteger("TurningState", 3);
+                body_animator.SetInteger(PlayerTurningState, 3);
+                arm_animator.SetInteger(PlayerTurningState, 3);
+                hair_animator.SetInteger(PlayerTurningState, 3);
             }
             else if (moveVertical < 0)
             {
                 //Down
-                body_animator.SetInteger("TurningState", 2);
-                arm_animator.SetInteger("TurningState", 2);
-                hair_animator.SetInteger("TurningState", 2);
+                body_animator.SetInteger(PlayerTurningState, 2);
+                arm_animator.SetInteger(PlayerTurningState, 2);
+                hair_animator.SetInteger(PlayerTurningState, 2);
             }
             else if (moveVertical > 0)
             {
                 //Up
-                body_animator.SetInteger("TurningState", 4);
-                arm_animator.SetInteger("TurningState", 4);
-                hair_animator.SetInteger("TurningState", 4);
+                body_animator.SetInteger(PlayerTurningState, 4);
+                arm_animator.SetInteger(PlayerTurningState, 4);
+                hair_animator.SetInteger(PlayerTurningState, 4);
             }
         }
         else
         {
             //Steady
-            body_animator.SetInteger("TurningState", 0);
-            arm_animator.SetInteger("TurningState", 0);
-            hair_animator.SetInteger("TurningState", 0);
+            body_animator.SetInteger(PlayerTurningState, 0);
+            arm_animator.SetInteger(PlayerTurningState, 0);
+            hair_animator.SetInteger(PlayerTurningState, 0);
         }
 
         // Adjusting the speed
         if (moveHorizontal != 0 && moveVertical != 0)
-            playerMovementSpeed = decidedMovementSpeed / Mathf.Sqrt(2);
+            decidedMovementSpeed = Settings.walkingSpeed / Mathf.Sqrt(2);
         else
-            playerMovementSpeed = decidedMovementSpeed;
+            decidedMovementSpeed = Settings.walkingSpeed;
 
-        rb.MovePosition(rb.position + movement * playerMovementSpeed);
+        rb.MovePosition(rb.position + movement * decidedMovementSpeed);
 
     }
 

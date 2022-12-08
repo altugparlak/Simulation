@@ -290,7 +290,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.24, y: 1.61, z: -10}
+  m_LocalPosition: {x: 0.61, y: 3.75, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -343,9 +343,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a160d838ff8b4b4693ac20007e008c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_AssetsPPU: 20
-  m_RefResolutionX: 480
-  m_RefResolutionY: 270
+  m_AssetsPPU: 21
+  m_RefResolutionX: 960
+  m_RefResolutionY: 540
   m_UpscaleRT: 0
   m_PixelSnapping: 0
   m_CropFrameX: 1
@@ -469,6 +469,7 @@ GameObject:
   - component: {fileID: 737612837041250991}
   - component: {fileID: 737612837041250992}
   - component: {fileID: 737612837041250993}
+  - component: {fileID: 737612837041250994}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -484,7 +485,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1269567158}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.24, y: 1.61, z: 0}
+  m_LocalPosition: {x: 0.61, y: 3.75, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -509,7 +510,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 73523ae4b0ffa42748e4c46d8ee85058, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMovementSpeed: 0.1
   arm_animator: {fileID: 948787467}
   body_animator: {fileID: 1776029681}
   hair_animator: {fileID: 1495108180}
@@ -733,6 +733,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1873718535}
   - component: {fileID: 1873718534}
+  - component: {fileID: 1873718537}
+  - component: {fileID: 1873718536}
   m_Layer: 0
   m_Name: CM vcam1
   m_TagString: Untagged
@@ -786,7 +788,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1873718533}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.24, y: 1.61, z: -10}
+  m_LocalPosition: {x: 0.61, y: 3.75, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -794,6 +796,35 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1873718536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873718533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f22eb9be2dddb4072bce283ee281cf91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1873718537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873718533}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2fba25a5cd15594e8f050a11e386c80, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ConfineMode: 0
+  m_BoundingVolume: {fileID: 0}
+  m_BoundingShape2D: {fileID: 0}
+  m_ConfineScreenEdges: 1
+  m_Damping: 0
 --- !u!50 &737612837041250991
 Rigidbody2D:
   serializedVersion: 4
@@ -852,6 +883,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.50590044, y: 0.14793038}
   m_EdgeRadius: 0
+--- !u!114 &737612837041250994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1269567158}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ef82c0f67a0b4af897bcf288b8a8307, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &737612837690769625
 GameObject:
   m_ObjectHideFlags: 0
