@@ -5,6 +5,7 @@ public class ItemDetails
 {
     public int itemCode;
     public ItemType itemType;
+    public int itemPrice;
     public string itemDescription;
     public Sprite itemSprite;
     public string itemLongDescription;
@@ -15,4 +16,8 @@ public class ItemDetails
     public bool canBeDropped;
     public bool canBeEaten;
     public bool canBeCarried;
+    public bool canBeSold;
+    public bool canBeBought;
+
+
 }

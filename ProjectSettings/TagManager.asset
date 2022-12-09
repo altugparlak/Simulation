@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - CinemachineBounds
+  - ItemsParentTransform
   layers:
   - Default
   - TransparentFX

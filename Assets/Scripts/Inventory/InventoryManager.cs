@@ -71,9 +71,7 @@ public class InventoryManager : SingletonMonobehaviour<InventoryManager>
         Destroy(gameObjectToDelete);
     }
 
-    /// <summary>
-    /// Add an item to the inventory list for the inventoryLocation
-    /// </summary>
+    // Add an item to the inventory list for the inventoryLocation
     public void AddItem(InventoryLocation inventoryLocation, Item item)
     {
         int itemCode = item.ItemCode;
@@ -105,9 +103,7 @@ public class InventoryManager : SingletonMonobehaviour<InventoryManager>
         //DebugPrintInventoryList(inventoryList);
     }
 
-    /// <summary>
-    /// Add item to position in the inventory
-    /// </summary>
+    // Add item to position in the inventory
     private void AddItemAtPosition(List<InventoryItem> inventoryList, int itemCode, int position)
     {
         InventoryItem inventoryItem = new InventoryItem();
@@ -134,6 +130,94 @@ public class InventoryManager : SingletonMonobehaviour<InventoryManager>
         }
 
         return -1;
+    }
+
+    public void RemoveItem(InventoryLocation inventoryLocation, int itemCode)
+    {
+        List<InventoryItem> inventoryList = inventoryLists[(int)inventoryLocation];
+
+        // Check if inventory already contains the item
+        int itemPosition = FindItemInInventory(inventoryLocation, itemCode);
+
+        if (itemPosition != -1)
+        {
+            RemoveItemAtPosition(inventoryList, itemCode, itemPosition);
+        }
+
+        //  Send event that inventory has been updated
+        EventHandler.CallInventoryUpdatedEvent(inventoryLocation, inventoryLists[(int)inventoryLocation]);
+
+    }
+    private void RemoveItemAtPosition(List<InventoryItem> inventoryList, int itemCode, int position)
+    {
+        InventoryItem inventoryItem = new InventoryItem();
+
+        int quantity = inventoryList[position].itemQuantity - 1;
+
+        if (quantity > 0)
+        {
+            inventoryItem.itemQuantity = quantity;
+            inventoryItem.itemCode = itemCode;
+            inventoryList[position] = inventoryItem;
+        }
+        else
+        {
+            inventoryList.RemoveAt(position);
+        }
+    }
+
+    public string GetItemTypeDescription(ItemType itemType)
+    {
+        string itemTypeDescription;
+        switch (itemType)
+        {
+            case ItemType.Breaking_tool:
+                itemTypeDescription = Settings.BreakingTool;
+                break;
+
+            case ItemType.Chopping_tool:
+                itemTypeDescription = Settings.ChoppingTool;
+                break;
+
+            case ItemType.Hoeing_tool:
+                itemTypeDescription = Settings.HoeingTool;
+                break;
+
+            case ItemType.Reaping_tool:
+                itemTypeDescription = Settings.ReapingTool;
+                break;
+
+            case ItemType.Watering_tool:
+                itemTypeDescription = Settings.WateringTool;
+                break;
+
+            case ItemType.Collecting_tool:
+                itemTypeDescription = Settings.CollectingTool;
+                break;
+
+            default:
+                itemTypeDescription = itemType.ToString();
+                break;
+        }
+
+        return itemTypeDescription;
+    }
+
+    public void SwapInventoryItems(InventoryLocation inventoryLocation, int fromItem, int toItem)
+    {
+        // if fromItem index and toItemIndex are within the bounds of the list, not the same, and greater than or equal to zero
+        if (fromItem < inventoryLists[(int)inventoryLocation].Count && toItem < inventoryLists[(int)inventoryLocation].Count
+             && fromItem != toItem && fromItem >= 0 && toItem >= 0)
+        {
+            InventoryItem fromInventoryItem = inventoryLists[(int)inventoryLocation][fromItem];
+            InventoryItem toInventoryItem = inventoryLists[(int)inventoryLocation][toItem];
+
+            inventoryLists[(int)inventoryLocation][toItem] = fromInventoryItem;
+            inventoryLists[(int)inventoryLocation][fromItem] = toInventoryItem;
+
+            //  Send event that inventory has been updated
+            EventHandler.CallInventoryUpdatedEvent(inventoryLocation, inventoryLists[(int)inventoryLocation]);
+        }
     }
 
     //private void DebugPrintInventoryList(List<InventoryItem> inventoryList)

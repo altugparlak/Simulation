@@ -6,6 +6,10 @@ public class UIInventoryBar : MonoBehaviour
 {
     [SerializeField] private Sprite blank16x16sprite = null;
     [SerializeField] private UIInventorySlot[] inventorySlot = null;
+    public GameObject inventoryBarDraggedItem;
+    [HideInInspector] public GameObject inventoryTextBoxGameobject;
+
+
     // Start is called before the first frame update
 
     private void OnDisable()

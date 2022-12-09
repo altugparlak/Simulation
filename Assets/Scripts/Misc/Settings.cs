@@ -25,6 +25,12 @@ public class Settings : MonoBehaviour
     // Player Animation Parameters
     public const string TurningState = "TurningState";
 
-
+    //Tools
+    public const string HoeingTool = "Hoe";
+    public const string ChoppingTool = "Axe";
+    public const string BreakingTool = "Pickaxe";
+    public const string ReapingTool = "Scythe";
+    public const string WateringTool = "Watering Can";
+    public const string CollectingTool = "Basket";
 
 }

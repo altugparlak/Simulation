@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Windows;
 
 public class Player : SingletonMonobehaviour<Player>
 {
@@ -8,10 +9,16 @@ public class Player : SingletonMonobehaviour<Player>
     [SerializeField] private Animator body_animator;
     [SerializeField] private Animator hair_animator;
 
+    private bool _playerInputIsDisabled = false;
+    public bool PlayerInputIsDisabled { get => _playerInputIsDisabled; set => _playerInputIsDisabled = value; }
+
     private static string PlayerTurningState;
     private float decidedMovementSpeed;
     CharacterController characterController;
     Rigidbody2D rb;
+    float moveHorizontal;
+    float moveVertical;
+    Vector2 movement;
 
     void Start()
     {
@@ -24,7 +31,13 @@ public class Player : SingletonMonobehaviour<Player>
 
     void Update()
     {
+        if (!PlayerInputIsDisabled)
+        {
 
+            PlayerMovementInput();
+
+            
+        }
     }
 
     private void FixedUpdate()
@@ -32,11 +45,15 @@ public class Player : SingletonMonobehaviour<Player>
         Move();
     }
 
+    private void PlayerMovementInput()
+    {
+        moveHorizontal = UnityEngine.Input.GetAxisRaw("Horizontal");
+        moveVertical = UnityEngine.Input.GetAxisRaw("Vertical");
+        movement = new Vector2(moveHorizontal, moveVertical);
+    }
+
     private void Move()
     {
-        float moveHorizontal = Input.GetAxisRaw("Horizontal");
-        float moveVertical = Input.GetAxisRaw("Vertical");
-        Vector2 movement = new Vector2(moveHorizontal, moveVertical);
         if (moveHorizontal !=0 || moveVertical !=0)
         {
             if (moveHorizontal < 0)
@@ -86,5 +103,33 @@ public class Player : SingletonMonobehaviour<Player>
 
     }
 
-    
+    private void ResetMovement()
+    {
+        // Reset movement
+        moveHorizontal = 0f;
+        moveVertical = 0f;
+        body_animator.SetInteger(PlayerTurningState, 0);
+        arm_animator.SetInteger(PlayerTurningState, 0);
+        hair_animator.SetInteger(PlayerTurningState, 0);
+    }
+
+    public void DisablePlayerInputAndResetMovement()
+    {
+        DisablePlayerInput();
+        ResetMovement();
+
+        
+    }
+
+    public void DisablePlayerInput()
+    {
+        PlayerInputIsDisabled = true;
+    }
+
+    public void EnablePlayerInput()
+    {
+        PlayerInputIsDisabled = false;
+    }
+
+
 }
