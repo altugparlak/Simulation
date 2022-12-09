@@ -3,13 +3,19 @@ using Cinemachine;
 
 public class SwitchBoundingShape : MonoBehaviour
 {
-    private void Start()
+
+    private void OnEnable()
     {
-        SwitchShape();
+        EventHandler.AfterSceneLoadEvent += SwitchBoundShape;
     }
 
+    private void OnDisable()
+    {
+        EventHandler.AfterSceneLoadEvent -= SwitchBoundShape;
+    }
 
-    private void SwitchShape()
+    /// Switch the collider that cinemachine uses to define the edges of the screen
+    private void SwitchBoundShape()
     {
         //  Get the polygon collider on the 'boundsconfiner' gameobject which is used by Cinemachine to prevent the camera going beyond the screen edges
         PolygonCollider2D polygonCollider2D = GameObject.FindGameObjectWithTag(Tags.CinemachineBounds).GetComponent<PolygonCollider2D>();

@@ -34,7 +34,54 @@ public class UIInventoryBar : MonoBehaviour
                 inventorySlot[i].textGUI.text = "";
                 inventorySlot[i].itemDetails = null;
                 inventorySlot[i].itemQuantity = 0;
-                //SetHighlightedInventorySlots(i);
+                SetHighlightedInventorySlots(i);
+            }
+        }
+    }
+
+    // Clear all highlights from the inventory bar
+    public void ClearHighlightOnInventorySlots()
+    {
+        if (inventorySlot.Length > 0)
+        {
+            // loop through inventory slots and clear highlight sprites
+            for (int i = 0; i < inventorySlot.Length; i++)
+            {
+                if (inventorySlot[i].isSelected)
+                {
+                    inventorySlot[i].isSelected = false;
+                    inventorySlot[i].inventorySlotHighlight.color = new Color(0f, 0f, 0f, 0f);
+                    // Update inventory to show item as not selected
+                    InventoryManager.Instance.ClearSelectedInventoryItem(InventoryLocation.player);
+                }
+            }
+        }
+    }
+
+    //  Set the selected highlight if set on all inventory item positions
+    public void SetHighlightedInventorySlots()
+    {
+        if (inventorySlot.Length > 0)
+        {
+            // loop through inventory slots and clear highlight sprites
+            for (int i = 0; i < inventorySlot.Length; i++)
+            {
+                SetHighlightedInventorySlots(i);
+            }
+        }
+    }
+
+    //  Set the selected highlight if set on an inventory item for a given slot item position
+    public void SetHighlightedInventorySlots(int itemPosition)
+    {
+        if (inventorySlot.Length > 0 && inventorySlot[itemPosition].itemDetails != null)
+        {
+            if (inventorySlot[itemPosition].isSelected)
+            {
+                inventorySlot[itemPosition].inventorySlotHighlight.color = new Color(1f, 1f, 1f, 1f);
+
+                // Update inventory to show item as selected
+                InventoryManager.Instance.SetSelectedInventoryItem(InventoryLocation.player, inventorySlot[itemPosition].itemDetails.itemCode);
             }
         }
     }
@@ -64,7 +111,7 @@ public class UIInventoryBar : MonoBehaviour
                             inventorySlot[i].textGUI.text = inventoryList[i].itemQuantity.ToString();
                             inventorySlot[i].itemDetails = itemDetails;
                             inventorySlot[i].itemQuantity = inventoryList[i].itemQuantity;
-                            //SetHighlightedInventorySlots(i);
+                            SetHighlightedInventorySlots(i);
 
                         }
                     }

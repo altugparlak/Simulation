@@ -35,8 +35,9 @@ public class Player : SingletonMonobehaviour<Player>
         {
 
             PlayerMovementInput();
+            PlayerTestInput();
 
-            
+
         }
     }
 
@@ -129,6 +130,27 @@ public class Player : SingletonMonobehaviour<Player>
     public void EnablePlayerInput()
     {
         PlayerInputIsDisabled = false;
+    }
+
+    private void PlayerTestInput()
+    {
+        //// Trigger Advance Time
+        //if (UnityEngine.Input.GetKey(KeyCode.T))
+        //{
+        //    TimeManager.Instance.TestAdvanceGameMinute();
+        //}
+
+        //// Trigger Advance Day
+        //if (UnityEngine.Input.GetKeyDown(KeyCode.G))
+        //{
+        //    TimeManager.Instance.TestAdvanceGameDay();
+        //}
+
+        if (UnityEngine.Input.GetKey(KeyCode.Space))
+        {
+            SceneLoader.Instance.FadeAndLoadScene(SceneName.Scene_Farm_1.ToString(), transform.position);
+        }
+
     }
 
 

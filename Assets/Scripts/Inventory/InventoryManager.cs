@@ -10,6 +10,8 @@ public class InventoryManager : SingletonMonobehaviour<InventoryManager>
 
     public List<InventoryItem>[] inventoryLists;
 
+    private int[] selectedInventoryItem; // the index of the array is the inventory list, and the value is the item code
+
     [HideInInspector] public int[] inventoryListCapacityIntArray; // the index of the array is the inventory list (from the InventoryLocation enum), and the value is the capacity of that inventory list
 
     [SerializeField] private ItemList itemList = null;
@@ -21,6 +23,14 @@ public class InventoryManager : SingletonMonobehaviour<InventoryManager>
         CreateInventoryLists();
 
         CreateItemDetailsDictionary();
+
+        // Initailise selected inventory item array
+        selectedInventoryItem = new int[(int)InventoryLocation.count];
+
+        for (int i = 0; i < selectedInventoryItem.Length; i++)
+        {
+            selectedInventoryItem[i] = -1; // -1 defines we havent an item selected
+        }
     }
 
     //  Populates the itemDetailsDictionary from the scriptable object items list 
@@ -218,6 +228,18 @@ public class InventoryManager : SingletonMonobehaviour<InventoryManager>
             //  Send event that inventory has been updated
             EventHandler.CallInventoryUpdatedEvent(inventoryLocation, inventoryLists[(int)inventoryLocation]);
         }
+    }
+
+    // Clear the selected inventory item for inventoryLocation
+    public void ClearSelectedInventoryItem(InventoryLocation inventoryLocation)
+    {
+        selectedInventoryItem[(int)inventoryLocation] = -1; // -1 defines we havent an item selected
+    }
+
+    // Set the selected inventory item for inventoryLocation to itemCode
+    public void SetSelectedInventoryItem(InventoryLocation inventoryLocation, int itemCode)
+    {
+        selectedInventoryItem[(int)inventoryLocation] = itemCode;
     }
 
     //private void DebugPrintInventoryList(List<InventoryItem> inventoryList)

@@ -26,3 +26,10 @@ public enum InventoryLocation
     chest,
     count
 }
+
+public enum SceneName
+{
+    Scene_Farm_1,
+    Scene_Home,
+    Scene_Field
+}

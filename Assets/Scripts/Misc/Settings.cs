@@ -33,4 +33,7 @@ public class Settings : MonoBehaviour
     public const string WateringTool = "Watering Can";
     public const string CollectingTool = "Basket";
 
+    // Time System
+    public const float secondsPerGameSecond = 0.012f; // transition value of real time second to game second
+
 }
