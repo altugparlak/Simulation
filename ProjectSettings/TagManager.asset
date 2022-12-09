@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CinemachineBounds
   - ItemsParentTransform
+  - Box
   layers:
   - Default
   - TransparentFX
