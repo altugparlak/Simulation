@@ -83,7 +83,22 @@ public class InventoryManager : SingletonMonobehaviour<InventoryManager>
 
     public void AddItemFromShop(InventoryLocation inventoryLocation, Item item)
     {
-        AddItem(inventoryLocation, item);
+        int itemCode = item.ItemCode;
+        ItemDetails itemDetails = GetItemDetails(itemCode);
+
+        if (itemDetails.itemType == ItemType.Outfit)
+        {
+            WearItem(itemDetails);
+        }
+        else
+        {
+            AddItem(inventoryLocation, item);
+        }
+    }
+
+    private void WearItem(ItemDetails itemdetails)
+    {
+        Player.Instance.ChangeOutfit(itemdetails.outfit, itemdetails.outfitBody, itemdetails.outfitArm, itemdetails.outfitHair);
     }
 
 

@@ -23,6 +23,8 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     [HideInInspector] public int itemQuantity;
     [SerializeField] private int slotNumber = 0;
 
+    private int playergold;
+
     private void Awake()
     {
         parentCanvas = GetComponentInParent<Canvas>();
@@ -31,11 +33,19 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
     private void OnEnable()
     {
         EventHandler.AfterSceneLoadEvent += SceneLoaded;
+        EventHandler.GameGoldEvent += UpdatePlayerGold;
+
     }
 
     private void OnDisable()
     {
         EventHandler.AfterSceneLoadEvent -= SceneLoaded;
+        EventHandler.GameGoldEvent -= UpdatePlayerGold;
+
+    }
+    private void UpdatePlayerGold(int gold)
+    {
+        playergold = gold;
     }
 
     private void Start()
@@ -76,7 +86,6 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
         if (draggedItem != null)
         {
             Destroy(draggedItem);
-
             // If drag ends over inventory bar, get item drag is over and swap them
             if (eventData.pointerCurrentRaycast.gameObject != null && eventData.pointerCurrentRaycast.gameObject.GetComponent<UIInventorySlot>() != null)
             {
@@ -92,7 +101,13 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
                 // Clear selected item
                 ClearSelectedItem();
             }
-            // else attempt to drop the item if it can be dropped
+            else if (eventData.pointerCurrentRaycast.gameObject != null && eventData.pointerCurrentRaycast.gameObject.GetComponent<UIShopSlot>() != null)
+            {
+                if (itemDetails.canBeSold)
+                {
+                    SellItem();
+                }
+            }
             else
             {
                 if (itemDetails.canBeDropped)
@@ -114,9 +129,33 @@ public class UIInventorySlot : MonoBehaviour, IBeginDragHandler, IDragHandler, I
             Vector3 worldPosition = mainCamera.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, -mainCamera.transform.position.z));
             // Create item from prefab at mouse position
             GameObject itemGameObject = Instantiate(itemPrefab, worldPosition, Quaternion.identity, parentItem);
+
+
             Item item = itemGameObject.GetComponent<Item>();
             item.ItemCode = itemDetails.itemCode;
 
+            // Remove item from players inventory
+            InventoryManager.Instance.RemoveItem(InventoryLocation.player, item.ItemCode);
+
+            // If no more of item then clear selected
+            if (InventoryManager.Instance.FindItemInInventory(InventoryLocation.player, item.ItemCode) == -1)
+            {
+                ClearSelectedItem();
+            }
+
+        }
+    }
+    // Drops the item (if selected) at the current mouse position.  Called by the DropItem event.
+    private void SellItem()
+    {
+        if (itemDetails != null && isSelected)
+        {
+            playergold += itemDetails.itemPrice;
+            EventHandler.CallPlayerGoldEvent(playergold);
+
+            Item item = itemPrefab.GetComponent<Item>();
+            item.ItemCode = itemDetails.itemCode;
+           
             // Remove item from players inventory
             InventoryManager.Instance.RemoveItem(InventoryLocation.player, item.ItemCode);
 

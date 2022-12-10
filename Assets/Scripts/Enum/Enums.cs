@@ -16,6 +16,15 @@ public enum ItemType
     Collecting_tool,
     Reapable_scenary,
     Furniture,
+    Outfit,
+    none,
+    count
+}
+
+public enum Outfit
+{
+    Default,
+    Farmer,
     none,
     count
 }

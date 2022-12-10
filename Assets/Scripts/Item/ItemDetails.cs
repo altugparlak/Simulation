@@ -5,6 +5,10 @@ public class ItemDetails
 {
     public int itemCode;
     public ItemType itemType;
+    public Outfit outfit;
+    public Sprite outfitBody;
+    public Sprite outfitArm;
+    public Sprite outfitHair;
     public int itemPrice;
     public int itemShopPrice;
     public string itemDescription;

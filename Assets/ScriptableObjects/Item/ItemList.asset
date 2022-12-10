@@ -15,6 +15,10 @@ MonoBehaviour:
   itemDetails:
   - itemCode: 1000
     itemType: 0
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
     itemPrice: 5
     itemShopPrice: 8
     itemDescription: Blueberry_seed
@@ -31,6 +35,10 @@ MonoBehaviour:
     canBeBought: 1
   - itemCode: 1001
     itemType: 0
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
     itemPrice: 5
     itemShopPrice: 8
     itemDescription: Eggplant_seed
@@ -47,6 +55,10 @@ MonoBehaviour:
     canBeBought: 1
   - itemCode: 1002
     itemType: 0
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
     itemPrice: 5
     itemShopPrice: 8
     itemDescription: Tomato_seed
@@ -63,6 +75,10 @@ MonoBehaviour:
     canBeBought: 1
   - itemCode: 1003
     itemType: 0
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
     itemPrice: 10
     itemShopPrice: 12
     itemDescription: Pumpkin_seed
@@ -79,6 +95,10 @@ MonoBehaviour:
     canBeBought: 1
   - itemCode: 1004
     itemType: 0
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
     itemPrice: 10
     itemShopPrice: 12
     itemDescription: Watermelon_seed
@@ -95,6 +115,10 @@ MonoBehaviour:
     canBeBought: 1
   - itemCode: 1005
     itemType: 0
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
     itemPrice: 20
     itemShopPrice: 25
     itemDescription: Redpapper_seed
@@ -111,6 +135,10 @@ MonoBehaviour:
     canBeBought: 1
   - itemCode: 1006
     itemType: 0
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
     itemPrice: 10
     itemShopPrice: 12
     itemDescription: Grape_seed
@@ -127,6 +155,10 @@ MonoBehaviour:
     canBeBought: 1
   - itemCode: 1007
     itemType: 0
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
     itemPrice: 15
     itemShopPrice: 20
     itemDescription: PinkRadish_seed
@@ -143,6 +175,10 @@ MonoBehaviour:
     canBeBought: 1
   - itemCode: 1008
     itemType: 0
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
     itemPrice: 10
     itemShopPrice: 12
     itemDescription: Potato_seed
@@ -159,6 +195,10 @@ MonoBehaviour:
     canBeBought: 1
   - itemCode: 1009
     itemType: 0
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
     itemPrice: 10
     itemShopPrice: 12
     itemDescription: Turnip_seed
@@ -175,6 +215,10 @@ MonoBehaviour:
     canBeBought: 1
   - itemCode: 1010
     itemType: 3
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
     itemPrice: 0
     itemShopPrice: 0
     itemDescription: Hoer
@@ -192,6 +236,10 @@ MonoBehaviour:
     canBeBought: 0
   - itemCode: 1011
     itemType: 4
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
     itemPrice: 0
     itemShopPrice: 0
     itemDescription: Axe
@@ -210,6 +258,10 @@ MonoBehaviour:
     canBeBought: 0
   - itemCode: 1012
     itemType: 5
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
     itemPrice: 0
     itemShopPrice: 0
     itemDescription: BreakingTool
@@ -227,6 +279,10 @@ MonoBehaviour:
     canBeBought: 0
   - itemCode: 1013
     itemType: 6
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
     itemPrice: 0
     itemShopPrice: 0
     itemDescription: Reaper
@@ -244,6 +300,10 @@ MonoBehaviour:
     canBeBought: 0
   - itemCode: 1014
     itemType: 2
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
     itemPrice: 0
     itemShopPrice: 0
     itemDescription: Watering_tool
@@ -260,6 +320,10 @@ MonoBehaviour:
     canBeBought: 0
   - itemCode: 1015
     itemType: 8
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
     itemPrice: 0
     itemShopPrice: 0
     itemDescription: Grass
@@ -276,6 +340,10 @@ MonoBehaviour:
     canBeBought: 0
   - itemCode: 1016
     itemType: 1
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
     itemPrice: 50
     itemShopPrice: 100
     itemDescription: Stone
@@ -292,6 +360,10 @@ MonoBehaviour:
     canBeBought: 1
   - itemCode: 1017
     itemType: 1
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
     itemPrice: 50
     itemShopPrice: 100
     itemDescription: Wood_broad
@@ -308,6 +380,10 @@ MonoBehaviour:
     canBeBought: 1
   - itemCode: 1018
     itemType: 1
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
     itemPrice: 50
     itemShopPrice: 100
     itemDescription: Wood_needie
@@ -324,6 +400,10 @@ MonoBehaviour:
     canBeBought: 1
   - itemCode: 1019
     itemType: 0
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
     itemPrice: 20
     itemShopPrice: 22
     itemDescription: Tree_seed_1
@@ -340,6 +420,10 @@ MonoBehaviour:
     canBeBought: 1
   - itemCode: 1020
     itemType: 0
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
     itemPrice: 20
     itemShopPrice: 22
     itemDescription: Tree_seed_2
@@ -356,6 +440,10 @@ MonoBehaviour:
     canBeBought: 1
   - itemCode: 1021
     itemType: 1
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
     itemPrice: 30
     itemShopPrice: 50
     itemDescription: Weed
@@ -372,6 +460,10 @@ MonoBehaviour:
     canBeBought: 1
   - itemCode: 1022
     itemType: 9
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
     itemPrice: 100
     itemShopPrice: 250
     itemDescription: Chair
@@ -388,6 +480,10 @@ MonoBehaviour:
     canBeBought: 1
   - itemCode: 1023
     itemType: 9
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
     itemPrice: 200
     itemShopPrice: 250
     itemDescription: Table
@@ -404,6 +500,10 @@ MonoBehaviour:
     canBeBought: 1
   - itemCode: 1024
     itemType: 1
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
     itemPrice: 15
     itemShopPrice: 20
     itemDescription: Blueberry
@@ -421,6 +521,10 @@ MonoBehaviour:
     canBeBought: 1
   - itemCode: 1025
     itemType: 1
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
     itemPrice: 15
     itemShopPrice: 20
     itemDescription: Eggplant
@@ -438,6 +542,10 @@ MonoBehaviour:
     canBeBought: 1
   - itemCode: 1026
     itemType: 1
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
     itemPrice: 25
     itemShopPrice: 40
     itemDescription: Pumpkin
@@ -454,6 +562,10 @@ MonoBehaviour:
     canBeBought: 1
   - itemCode: 1027
     itemType: 1
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
     itemPrice: 40
     itemShopPrice: 100
     itemDescription: Redpapper
@@ -471,6 +583,10 @@ MonoBehaviour:
     canBeBought: 1
   - itemCode: 1028
     itemType: 1
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
     itemPrice: 20
     itemShopPrice: 25
     itemDescription: Tomato
@@ -488,6 +604,10 @@ MonoBehaviour:
     canBeBought: 1
   - itemCode: 1029
     itemType: 1
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
     itemPrice: 35
     itemShopPrice: 50
     itemDescription: Watermelon
@@ -499,6 +619,26 @@ MonoBehaviour:
     canBePickedUp: 1
     canBeDropped: 1
     canBeEaten: 1
+    canBeCarried: 1
+    canBeSold: 1
+    canBeBought: 1
+  - itemCode: 1030
+    itemType: 10
+    outfit: 1
+    outfitBody: {fileID: 23192070, guid: e4da43f39ee1848e58729b7a726bbb05, type: 3}
+    outfitArm: {fileID: -1433908395, guid: b25f81d59be7d43cba35974d58452815, type: 3}
+    outfitHair: {fileID: -1665453071, guid: 4e149b0e767fc42668e738ecf9b4fa7c, type: 3}
+    itemPrice: 100
+    itemShopPrice: 100
+    itemDescription: FarmerOutfit
+    itemSprite: {fileID: 21300000, guid: 8b19a57b1ffa54b6aa7c724d10f87b3a, type: 3}
+    itemLongDescription: Keeps you warm.
+    itemUseGridRadius: 2
+    itemUseRadius: 0
+    isStartingItem: 0
+    canBePickedUp: 0
+    canBeDropped: 0
+    canBeEaten: 0
     canBeCarried: 1
     canBeSold: 1
     canBeBought: 1
