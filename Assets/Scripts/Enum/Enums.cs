@@ -20,10 +20,18 @@ public enum ItemType
     count
 }
 
+public enum NPCType
+{
+    Shop,
+    JustTalk,
+    count
+}
+
 public enum InventoryLocation
 {
     player,
     chest,
+    shop,
     count
 }
 

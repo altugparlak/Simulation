@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6134ef62fc6d40bfaef67043d059886, type: 3}
+  m_Name: NPCList
+  m_EditorClassIdentifier: 
+  npcDetails:
+  - npcCode: 100
+    npcType: 0
+    npcName: Mira
+    dialogue:
+    - Hello! Welcome to my shop.
+    - My name is Mira.
+    - Would you like to take a look at my shop?
+    continueButtonText: Next
+    answerButtonText: Yes!
+    npcGameSprite: {fileID: 1007033402911347040, guid: 48c266ae0734348198694bc6282c5264, type: 3}
+    npcUISprite: {fileID: 21300000, guid: 67d354b9f685e4e1b90255eb84bc5abe, type: 3}
+    canBeTalkable: 1

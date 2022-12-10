@@ -7,6 +7,8 @@ TagManager:
   - CinemachineBounds
   - ItemsParentTransform
   - Box
+  - Canvas
+  - SceneNPCManager
   layers:
   - Default
   - TransparentFX
