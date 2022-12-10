@@ -94,11 +94,11 @@ public class Player : SingletonMonobehaviour<Player>
     private void PlayerTestInput()
     {
 
-        if (UnityEngine.Input.GetKey(KeyCode.Space))
-        {
-            playerMoney += 100;
-            EventHandler.CallPlayerGoldEvent(playerMoney);
-        }
+        //if (UnityEngine.Input.GetKey(KeyCode.Space))
+        //{
+        //    playerMoney += 100;
+        //    EventHandler.CallPlayerGoldEvent(playerMoney);
+        //}
 
         //if (UnityEngine.Input.GetKey(KeyCode.E))
         //{
