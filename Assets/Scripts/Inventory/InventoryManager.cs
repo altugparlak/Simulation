@@ -81,6 +81,12 @@ public class InventoryManager : SingletonMonobehaviour<InventoryManager>
         Destroy(gameObjectToDelete);
     }
 
+    public void AddItemFromShop(InventoryLocation inventoryLocation, Item item)
+    {
+        AddItem(inventoryLocation, item);
+    }
+
+
     // Add an item to the inventory list for the inventoryLocation
     public void AddItem(InventoryLocation inventoryLocation, Item item)
     {

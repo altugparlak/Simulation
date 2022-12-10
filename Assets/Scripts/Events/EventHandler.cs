@@ -88,4 +88,15 @@ public class EventHandler : MonoBehaviour
     }
 
     #endregion
+
+    //Gold events
+    public static event Action<int> GameGoldEvent;
+
+    public static void CallPlayerGoldEvent(int playerGold)
+    {
+        if (GameGoldEvent != null)
+        {
+            GameGoldEvent(playerGold);
+        }
+    }
 }

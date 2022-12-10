@@ -12,6 +12,7 @@ public class Player : SingletonMonobehaviour<Player>
     private bool _playerInputIsDisabled = false;
     public bool PlayerInputIsDisabled { get => _playerInputIsDisabled; set => _playerInputIsDisabled = value; }
 
+    public int playerMoney = 0;
     private static string PlayerTurningState;
     private float decidedMovementSpeed;
     CharacterController characterController;
@@ -22,6 +23,9 @@ public class Player : SingletonMonobehaviour<Player>
 
     void Start()
     {
+        EventHandler.CallPlayerGoldEvent(playerMoney);
+        EventHandler.GameGoldEvent += UpdatePlayerGold;
+
         characterController = GetComponent<CharacterController>();
         rb = GetComponent<Rigidbody2D>();
 
@@ -36,14 +40,15 @@ public class Player : SingletonMonobehaviour<Player>
 
             PlayerMovementInput();
             PlayerTestInput();
-
-
         }
     }
 
     private void FixedUpdate()
     {
-        Move();
+        if (!PlayerInputIsDisabled)
+        {
+            Move();
+        }
     }
 
     private void PlayerMovementInput()
@@ -119,7 +124,6 @@ public class Player : SingletonMonobehaviour<Player>
         DisablePlayerInput();
         ResetMovement();
 
-        
     }
 
     public void DisablePlayerInput()
@@ -148,9 +152,31 @@ public class Player : SingletonMonobehaviour<Player>
 
         if (UnityEngine.Input.GetKey(KeyCode.Space))
         {
-            SceneLoader.Instance.FadeAndLoadScene(SceneName.Scene_Farm_1.ToString(), transform.position);
+            playerMoney += 100;
+            EventHandler.CallPlayerGoldEvent(playerMoney);
         }
 
+        if (UnityEngine.Input.GetKey(KeyCode.E))
+        {
+            playerMoney -= 100;
+            EventHandler.CallPlayerGoldEvent(playerMoney);
+        }
+
+    }
+
+    public int GetPlayerGold()
+    {
+        return playerMoney;
+    }
+
+    private void UpdatePlayerGold(int gold)
+    {
+        playerMoney = gold;
+    }
+
+    private void OnDisable()
+    {
+        EventHandler.GameGoldEvent -= UpdatePlayerGold;
     }
 
 

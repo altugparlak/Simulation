@@ -9,6 +9,7 @@ public class SceneNPCManager : SingletonMonobehaviour<SceneNPCManager>
     private Dictionary<int, NPCDetails> npcDetailsDictionary;
     [SerializeField] private NPC npcList = null;
 
+    [SerializeField] private GameObject shopPanel;
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private GameObject dialogueButton;
     [SerializeField] private TextMeshProUGUI dialogueText;
@@ -16,6 +17,8 @@ public class SceneNPCManager : SingletonMonobehaviour<SceneNPCManager>
 
     private string[] dialogue;
     private string buttonAnswer;
+
+    NPCType talkingNPCtype;
 
     [HideInInspector] public bool isNPCtalkActivated = false;
     private int index = 0;
@@ -27,7 +30,7 @@ public class SceneNPCManager : SingletonMonobehaviour<SceneNPCManager>
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E) && isNPCtalkActivated)
+        if (Input.GetKeyDown(KeyCode.Space) && isNPCtalkActivated)
         {
             if (dialoguePanel.activeInHierarchy)
             {
@@ -72,8 +75,18 @@ public class SceneNPCManager : SingletonMonobehaviour<SceneNPCManager>
         }
         else
         {
+            ShopActive();
             noText();
         }
+    }
+
+    private void ShopActive()
+    {
+        shopPanel.SetActive(true);
+    }
+    public void ShopDeactive()
+    {
+        shopPanel.SetActive(false);
     }
 
     public void ResetNPCvalues()
@@ -81,10 +94,11 @@ public class SceneNPCManager : SingletonMonobehaviour<SceneNPCManager>
 
     }
 
-    public void GetTalkingNPCData(string[] diaTalk, string buttonAnswerText)
+    public void GetTalkingNPCData(string[] diaTalk, string buttonAnswerText, NPCType npcType)
     {
         dialogue = diaTalk;
         buttonAnswer = buttonAnswerText;
+        talkingNPCtype = npcType;
     }
 
     private void CreateNpcDetailsDictionary()

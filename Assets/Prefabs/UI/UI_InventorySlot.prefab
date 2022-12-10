@@ -68,7 +68,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 8
+    m_FontSize: 10
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
@@ -163,12 +163,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6305c239890794661adf1d68bb331855, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  draggedItem: {fileID: 0}
   inventorySlotHighlight: {fileID: 8738861690178330835}
   inventorySlotImage: {fileID: 214127153912231887}
   textGUI: {fileID: 8738861689861883818}
+  inventoryBar: {fileID: 0}
+  inventoryTextBoxPrefab: {fileID: 0}
   itemDetails:
     itemCode: 0
     itemType: 0
+    itemPrice: 0
+    itemShopPrice: 0
     itemDescription: 
     itemSprite: {fileID: 0}
     itemLongDescription: 
@@ -179,7 +184,12 @@ MonoBehaviour:
     canBeDropped: 0
     canBeEaten: 0
     canBeCarried: 0
+    canBeSold: 0
+    canBeBought: 0
+  isSelected: 0
+  itemPrefab: {fileID: 0}
   itemQuantity: 0
+  slotNumber: 0
 --- !u!222 &355270068130055245
 CanvasRenderer:
   m_ObjectHideFlags: 0

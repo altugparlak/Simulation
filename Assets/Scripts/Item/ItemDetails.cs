@@ -6,6 +6,7 @@ public class ItemDetails
     public int itemCode;
     public ItemType itemType;
     public int itemPrice;
+    public int itemShopPrice;
     public string itemDescription;
     public Sprite itemSprite;
     public string itemLongDescription;
