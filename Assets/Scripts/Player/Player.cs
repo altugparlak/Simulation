@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Windows;
 
+[RequireComponent(typeof(AudioSource))]
 public class Player : SingletonMonobehaviour<Player>
 {
     [SerializeField] private Animator arm_animator;

@@ -17,7 +17,7 @@ public class NPCTalkTrigger : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             SceneNPCManager.Instance.isNPCtalkActivated = true;
-
+            SceneNPCManager.Instance.InfoPanel.GetComponent<Animator>().SetBool("InfoShow", true);
             NPCDetails nPCDetails = SceneNPCManager.Instance.GetNpcDetails(_npcCode);
             SceneNPCManager.Instance.GetTalkingNPCData(nPCDetails.dialogue, nPCDetails.answerButtonText, nPCDetails.npcType);
         }
@@ -30,6 +30,7 @@ public class NPCTalkTrigger : MonoBehaviour
             SceneNPCManager.Instance.ShopDeactive();
             SceneNPCManager.Instance.isNPCtalkActivated = false;
             SceneNPCManager.Instance.noText();
+            SceneNPCManager.Instance.InfoPanel.GetComponent<Animator>().SetBool("InfoShow", false);
 
         }
     }

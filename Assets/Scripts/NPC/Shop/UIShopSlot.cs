@@ -86,8 +86,8 @@ public class UIShopSlot : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDr
                 }
 
                 // Enable player input
-                Player.Instance.EnablePlayerInput();
             }
+            Player.Instance.EnablePlayerInput();
 
         }
     }

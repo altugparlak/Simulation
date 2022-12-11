@@ -628,8 +628,8 @@ MonoBehaviour:
     outfitBody: {fileID: 23192070, guid: e4da43f39ee1848e58729b7a726bbb05, type: 3}
     outfitArm: {fileID: -1433908395, guid: b25f81d59be7d43cba35974d58452815, type: 3}
     outfitHair: {fileID: -1665453071, guid: 4e149b0e767fc42668e738ecf9b4fa7c, type: 3}
-    itemPrice: 100
-    itemShopPrice: 100
+    itemPrice: 1000
+    itemShopPrice: 1000
     itemDescription: FarmerOutfit
     itemSprite: {fileID: 21300000, guid: 8b19a57b1ffa54b6aa7c724d10f87b3a, type: 3}
     itemLongDescription: Keeps you warm.

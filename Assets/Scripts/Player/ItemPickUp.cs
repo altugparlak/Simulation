@@ -2,6 +2,14 @@ using UnityEngine;
 
 public class ItemPickUp : MonoBehaviour
 {
+    AudioSource audioSource;
+    AudioClip pickupSound;
+
+    private void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+        pickupSound = SoundEffectsManager.Instance.pick_Up;
+    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Item item = collision.GetComponent<Item>();
@@ -18,7 +26,7 @@ public class ItemPickUp : MonoBehaviour
                 InventoryManager.Instance.AddItem(InventoryLocation.player, item, collision.gameObject);
 
                 // Play pick up sound
-                //AudioManager.Instance.PlaySound(SoundName.effectPickupSound);
+                GetComponent<AudioSource>().PlayOneShot(pickupSound);
 
             }
         }

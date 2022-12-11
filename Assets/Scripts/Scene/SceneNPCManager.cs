@@ -9,6 +9,7 @@ public class SceneNPCManager : SingletonMonobehaviour<SceneNPCManager>
     private Dictionary<int, NPCDetails> npcDetailsDictionary;
     [SerializeField] private NPC npcList = null;
 
+    [SerializeField] public GameObject InfoPanel;
     [SerializeField] private GameObject shopPanel;
     [SerializeField] private GameObject dialoguePanel;
     [SerializeField] private GameObject dialogueButton;
@@ -34,7 +35,7 @@ public class SceneNPCManager : SingletonMonobehaviour<SceneNPCManager>
         {
             if (dialoguePanel.activeInHierarchy)
             {
-                noText();
+                NextLine();
             }
             else
             {
