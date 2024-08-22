@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - CinemachineBounds
+  - ItemsParentTransform
+  - Box
+  - Canvas
+  - SceneNPCManager
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Layer1
+  - Layer2
+  - Instances
+  - Player
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Ground1
+    uniqueID: 369808333
+    locked: 0
+  - name: Ground2
+    uniqueID: 3412487007
+    locked: 0
+  - name: Ground3
+    uniqueID: 1346664707
+    locked: 0
+  - name: GroundDecoration1
+    uniqueID: 4029863287
+    locked: 0
+  - name: GroundDecoration2
+    uniqueID: 2563832277
+    locked: 0
+  - name: Incstances
+    uniqueID: 4078531329
+    locked: 0
+  - name: Front1
+    uniqueID: 4207631417
+    locked: 0
+  - name: Front2
+    uniqueID: 2540319551
+    locked: 0
+  - name: Collisions
+    uniqueID: 2362141059
+    locked: 0

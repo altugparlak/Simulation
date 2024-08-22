@@ -1,0 +1,644 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43d5bc806ab5e4e14ba877b84eba1411, type: 3}
+  m_Name: ItemList
+  m_EditorClassIdentifier: 
+  itemDetails:
+  - itemCode: 1000
+    itemType: 0
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
+    itemPrice: 5
+    itemShopPrice: 8
+    itemDescription: Blueberry_seed
+    itemSprite: {fileID: 21300000, guid: a190370c9a26a43aa9c3e596f8976fc4, type: 3}
+    itemLongDescription: Healthy and easy to consume
+    itemUseGridRadius: 2
+    itemUseRadius: 0
+    isStartingItem: 0
+    canBePickedUp: 1
+    canBeDropped: 1
+    canBeEaten: 0
+    canBeCarried: 1
+    canBeSold: 1
+    canBeBought: 1
+  - itemCode: 1001
+    itemType: 0
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
+    itemPrice: 5
+    itemShopPrice: 8
+    itemDescription: Eggplant_seed
+    itemSprite: {fileID: 21300000, guid: 7fa27847daa7848cd8221a18379f7a21, type: 3}
+    itemLongDescription: 
+    itemUseGridRadius: 2
+    itemUseRadius: 0
+    isStartingItem: 0
+    canBePickedUp: 1
+    canBeDropped: 1
+    canBeEaten: 0
+    canBeCarried: 1
+    canBeSold: 1
+    canBeBought: 1
+  - itemCode: 1002
+    itemType: 0
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
+    itemPrice: 5
+    itemShopPrice: 8
+    itemDescription: Tomato_seed
+    itemSprite: {fileID: 21300000, guid: b2299da4eb0be49f0843d0e1fbafbed1, type: 3}
+    itemLongDescription: 
+    itemUseGridRadius: 2
+    itemUseRadius: 0
+    isStartingItem: 0
+    canBePickedUp: 1
+    canBeDropped: 1
+    canBeEaten: 0
+    canBeCarried: 1
+    canBeSold: 1
+    canBeBought: 1
+  - itemCode: 1003
+    itemType: 0
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
+    itemPrice: 10
+    itemShopPrice: 12
+    itemDescription: Pumpkin_seed
+    itemSprite: {fileID: 21300000, guid: 738078985c017481f8d443cf821e26b5, type: 3}
+    itemLongDescription: 
+    itemUseGridRadius: 2
+    itemUseRadius: 0
+    isStartingItem: 0
+    canBePickedUp: 1
+    canBeDropped: 1
+    canBeEaten: 0
+    canBeCarried: 1
+    canBeSold: 1
+    canBeBought: 1
+  - itemCode: 1004
+    itemType: 0
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
+    itemPrice: 10
+    itemShopPrice: 12
+    itemDescription: Watermelon_seed
+    itemSprite: {fileID: 21300000, guid: e4373ab1bca4244e89aa5c948b14f09f, type: 3}
+    itemLongDescription: 
+    itemUseGridRadius: 2
+    itemUseRadius: 0
+    isStartingItem: 0
+    canBePickedUp: 1
+    canBeDropped: 1
+    canBeEaten: 0
+    canBeCarried: 1
+    canBeSold: 1
+    canBeBought: 1
+  - itemCode: 1005
+    itemType: 0
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
+    itemPrice: 20
+    itemShopPrice: 25
+    itemDescription: Redpapper_seed
+    itemSprite: {fileID: 21300000, guid: 38565caefc0504f3f9cb90ce3c5d3c3c, type: 3}
+    itemLongDescription: 
+    itemUseGridRadius: 2
+    itemUseRadius: 0
+    isStartingItem: 0
+    canBePickedUp: 1
+    canBeDropped: 1
+    canBeEaten: 0
+    canBeCarried: 1
+    canBeSold: 1
+    canBeBought: 1
+  - itemCode: 1006
+    itemType: 0
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
+    itemPrice: 10
+    itemShopPrice: 12
+    itemDescription: Grape_seed
+    itemSprite: {fileID: 21300000, guid: eff80b331cf5c4ca49471d8604c3b52e, type: 3}
+    itemLongDescription: 
+    itemUseGridRadius: 2
+    itemUseRadius: 0
+    isStartingItem: 0
+    canBePickedUp: 1
+    canBeDropped: 1
+    canBeEaten: 0
+    canBeCarried: 1
+    canBeSold: 1
+    canBeBought: 1
+  - itemCode: 1007
+    itemType: 0
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
+    itemPrice: 15
+    itemShopPrice: 20
+    itemDescription: PinkRadish_seed
+    itemSprite: {fileID: 21300000, guid: 0f5a527a6777043739c58b084887ec12, type: 3}
+    itemLongDescription: 
+    itemUseGridRadius: 2
+    itemUseRadius: 0
+    isStartingItem: 0
+    canBePickedUp: 1
+    canBeDropped: 1
+    canBeEaten: 0
+    canBeCarried: 1
+    canBeSold: 1
+    canBeBought: 1
+  - itemCode: 1008
+    itemType: 0
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
+    itemPrice: 10
+    itemShopPrice: 12
+    itemDescription: Potato_seed
+    itemSprite: {fileID: 21300000, guid: 712efb3c5425e4d62aa03accb5b7a498, type: 3}
+    itemLongDescription: 
+    itemUseGridRadius: 2
+    itemUseRadius: 0
+    isStartingItem: 0
+    canBePickedUp: 1
+    canBeDropped: 1
+    canBeEaten: 0
+    canBeCarried: 1
+    canBeSold: 1
+    canBeBought: 1
+  - itemCode: 1009
+    itemType: 0
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
+    itemPrice: 10
+    itemShopPrice: 12
+    itemDescription: Turnip_seed
+    itemSprite: {fileID: 21300000, guid: 58c6799e544ae49a48186335b7f16ba0, type: 3}
+    itemLongDescription: 
+    itemUseGridRadius: 2
+    itemUseRadius: 0
+    isStartingItem: 0
+    canBePickedUp: 1
+    canBeDropped: 1
+    canBeEaten: 0
+    canBeCarried: 1
+    canBeSold: 1
+    canBeBought: 1
+  - itemCode: 1010
+    itemType: 3
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
+    itemPrice: 0
+    itemShopPrice: 0
+    itemDescription: Hoer
+    itemSprite: {fileID: 21300000, guid: 71ca9227166f34790bb8b1c7948d491f, type: 3}
+    itemLongDescription: The hoe is an ancient and versatile agricultural tool for
+      mobilizing, moving and mixing small amounts of soil.
+    itemUseGridRadius: 1
+    itemUseRadius: 0
+    isStartingItem: 1
+    canBePickedUp: 1
+    canBeDropped: 0
+    canBeEaten: 0
+    canBeCarried: 0
+    canBeSold: 0
+    canBeBought: 0
+  - itemCode: 1011
+    itemType: 4
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
+    itemPrice: 0
+    itemShopPrice: 0
+    itemDescription: Axe
+    itemSprite: {fileID: 21300000, guid: 3714c3e6b5e3d498ebcd06d432b3dd89, type: 3}
+    itemLongDescription: The axe has been used by mankind for tens of thousands of
+      years to cut, shape and shred wood. Axes have many forms; but most basically
+      consist of a head and a handle.
+    itemUseGridRadius: 1
+    itemUseRadius: 0
+    isStartingItem: 1
+    canBePickedUp: 1
+    canBeDropped: 0
+    canBeEaten: 0
+    canBeCarried: 0
+    canBeSold: 0
+    canBeBought: 0
+  - itemCode: 1012
+    itemType: 5
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
+    itemPrice: 0
+    itemShopPrice: 0
+    itemDescription: BreakingTool
+    itemSprite: {fileID: 21300000, guid: ab9788b07a759404293670018c76ec0f, type: 3}
+    itemLongDescription: Pickaxe can be used in general construction and mining,
+      and adapted to warfare.
+    itemUseGridRadius: 1
+    itemUseRadius: 0
+    isStartingItem: 1
+    canBePickedUp: 1
+    canBeDropped: 0
+    canBeEaten: 0
+    canBeCarried: 0
+    canBeSold: 0
+    canBeBought: 0
+  - itemCode: 1013
+    itemType: 6
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
+    itemPrice: 0
+    itemShopPrice: 0
+    itemDescription: Reaper
+    itemSprite: {fileID: 21300000, guid: 9aae36af8a3474f72a99e04af71b7044, type: 3}
+    itemLongDescription: A curved cutting tool with a sharp edge, used in the cutting
+      or harvesting of crops.
+    itemUseGridRadius: 1
+    itemUseRadius: 0
+    isStartingItem: 1
+    canBePickedUp: 1
+    canBeDropped: 0
+    canBeEaten: 0
+    canBeCarried: 0
+    canBeSold: 0
+    canBeBought: 0
+  - itemCode: 1014
+    itemType: 2
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
+    itemPrice: 0
+    itemShopPrice: 0
+    itemDescription: Watering_tool
+    itemSprite: {fileID: 21300000, guid: 5b98b5b289f8549f9bbd017e5f0aa5c7, type: 3}
+    itemLongDescription: It can be used to water plants.
+    itemUseGridRadius: 1
+    itemUseRadius: 0
+    isStartingItem: 1
+    canBePickedUp: 1
+    canBeDropped: 0
+    canBeEaten: 0
+    canBeCarried: 0
+    canBeSold: 0
+    canBeBought: 0
+  - itemCode: 1015
+    itemType: 8
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
+    itemPrice: 0
+    itemShopPrice: 0
+    itemDescription: Grass
+    itemSprite: {fileID: 21300000, guid: 0c055f09a64a74805ad18c1f0b134fec, type: 3}
+    itemLongDescription: 
+    itemUseGridRadius: 1
+    itemUseRadius: 0
+    isStartingItem: 0
+    canBePickedUp: 0
+    canBeDropped: 0
+    canBeEaten: 0
+    canBeCarried: 0
+    canBeSold: 0
+    canBeBought: 0
+  - itemCode: 1016
+    itemType: 1
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
+    itemPrice: 50
+    itemShopPrice: 100
+    itemDescription: Stone
+    itemSprite: {fileID: 21300000, guid: 45a3ea64377134f4299e757a1becb6df, type: 3}
+    itemLongDescription: 
+    itemUseGridRadius: 2
+    itemUseRadius: 0
+    isStartingItem: 0
+    canBePickedUp: 1
+    canBeDropped: 1
+    canBeEaten: 0
+    canBeCarried: 1
+    canBeSold: 1
+    canBeBought: 1
+  - itemCode: 1017
+    itemType: 1
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
+    itemPrice: 50
+    itemShopPrice: 100
+    itemDescription: Wood_broad
+    itemSprite: {fileID: 21300000, guid: 018bd79f696fb400584536e445976758, type: 3}
+    itemLongDescription: 
+    itemUseGridRadius: 2
+    itemUseRadius: 0
+    isStartingItem: 0
+    canBePickedUp: 1
+    canBeDropped: 1
+    canBeEaten: 0
+    canBeCarried: 1
+    canBeSold: 1
+    canBeBought: 1
+  - itemCode: 1018
+    itemType: 1
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
+    itemPrice: 50
+    itemShopPrice: 100
+    itemDescription: Wood_needie
+    itemSprite: {fileID: 21300000, guid: 0d5f887d0ba144b7180f3e33336beac5, type: 3}
+    itemLongDescription: 
+    itemUseGridRadius: 2
+    itemUseRadius: 0
+    isStartingItem: 0
+    canBePickedUp: 1
+    canBeDropped: 1
+    canBeEaten: 0
+    canBeCarried: 1
+    canBeSold: 1
+    canBeBought: 1
+  - itemCode: 1019
+    itemType: 0
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
+    itemPrice: 20
+    itemShopPrice: 22
+    itemDescription: Tree_seed_1
+    itemSprite: {fileID: 21300000, guid: b344f2cee7ac54d7ab52e493a1bb4ee7, type: 3}
+    itemLongDescription: 
+    itemUseGridRadius: 2
+    itemUseRadius: 0
+    isStartingItem: 0
+    canBePickedUp: 1
+    canBeDropped: 1
+    canBeEaten: 0
+    canBeCarried: 1
+    canBeSold: 1
+    canBeBought: 1
+  - itemCode: 1020
+    itemType: 0
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
+    itemPrice: 20
+    itemShopPrice: 22
+    itemDescription: Tree_seed_2
+    itemSprite: {fileID: 21300000, guid: 309497be57b084f4da5b2c165ddceca7, type: 3}
+    itemLongDescription: 
+    itemUseGridRadius: 2
+    itemUseRadius: 0
+    isStartingItem: 0
+    canBePickedUp: 1
+    canBeDropped: 1
+    canBeEaten: 0
+    canBeCarried: 1
+    canBeSold: 1
+    canBeBought: 1
+  - itemCode: 1021
+    itemType: 1
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
+    itemPrice: 30
+    itemShopPrice: 50
+    itemDescription: Weed
+    itemSprite: {fileID: 21300000, guid: e8ebe711ec1de4697a10d8c2f3f39f20, type: 3}
+    itemLongDescription: 
+    itemUseGridRadius: 2
+    itemUseRadius: 0
+    isStartingItem: 0
+    canBePickedUp: 1
+    canBeDropped: 1
+    canBeEaten: 0
+    canBeCarried: 1
+    canBeSold: 1
+    canBeBought: 1
+  - itemCode: 1022
+    itemType: 9
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
+    itemPrice: 100
+    itemShopPrice: 250
+    itemDescription: Chair
+    itemSprite: {fileID: 2099324415, guid: 3bdb6f1370acd4062a47227630afb05d, type: 3}
+    itemLongDescription: 
+    itemUseGridRadius: 2
+    itemUseRadius: 0
+    isStartingItem: 0
+    canBePickedUp: 0
+    canBeDropped: 0
+    canBeEaten: 0
+    canBeCarried: 0
+    canBeSold: 1
+    canBeBought: 1
+  - itemCode: 1023
+    itemType: 9
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
+    itemPrice: 200
+    itemShopPrice: 250
+    itemDescription: Table
+    itemSprite: {fileID: -2024677974, guid: 3bdb6f1370acd4062a47227630afb05d, type: 3}
+    itemLongDescription: 
+    itemUseGridRadius: 2
+    itemUseRadius: 0
+    isStartingItem: 0
+    canBePickedUp: 0
+    canBeDropped: 0
+    canBeEaten: 0
+    canBeCarried: 0
+    canBeSold: 1
+    canBeBought: 1
+  - itemCode: 1024
+    itemType: 1
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
+    itemPrice: 15
+    itemShopPrice: 20
+    itemDescription: Blueberry
+    itemSprite: {fileID: 21300000, guid: 1683a58ffb6f243019e331431169e852, type: 3}
+    itemLongDescription: Also known as antioxidant store, blueberry is a healthy
+      food that contains many vitamins and minerals.
+    itemUseGridRadius: 2
+    itemUseRadius: 0
+    isStartingItem: 0
+    canBePickedUp: 1
+    canBeDropped: 1
+    canBeEaten: 1
+    canBeCarried: 1
+    canBeSold: 1
+    canBeBought: 1
+  - itemCode: 1025
+    itemType: 1
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
+    itemPrice: 15
+    itemShopPrice: 20
+    itemDescription: Eggplant
+    itemSprite: {fileID: 21300000, guid: 18dd810d9429d489cae29f0f11a4d177, type: 3}
+    itemLongDescription: It is a perennial cultivar that grows as an annual in warm
+      climates and as a small tree in tropical climates.
+    itemUseGridRadius: 2
+    itemUseRadius: 0
+    isStartingItem: 0
+    canBePickedUp: 1
+    canBeDropped: 1
+    canBeEaten: 1
+    canBeCarried: 1
+    canBeSold: 1
+    canBeBought: 1
+  - itemCode: 1026
+    itemType: 1
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
+    itemPrice: 25
+    itemShopPrice: 40
+    itemDescription: Pumpkin
+    itemSprite: {fileID: 21300000, guid: a986aa660462947b1826545d17ad6691, type: 3}
+    itemLongDescription: Pumpkin is a fruit rich in fiber. Can be used for dessert.
+    itemUseGridRadius: 2
+    itemUseRadius: 0
+    isStartingItem: 0
+    canBePickedUp: 1
+    canBeDropped: 1
+    canBeEaten: 1
+    canBeCarried: 1
+    canBeSold: 1
+    canBeBought: 1
+  - itemCode: 1027
+    itemType: 1
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
+    itemPrice: 40
+    itemShopPrice: 100
+    itemDescription: Redpapper
+    itemSprite: {fileID: 21300000, guid: 3fcb9b37a91af4aed85fcc8c19c7d112, type: 3}
+    itemLongDescription: You have to be careful when you put it in the food. Also
+      can be valuable.
+    itemUseGridRadius: 2
+    itemUseRadius: 0
+    isStartingItem: 0
+    canBePickedUp: 1
+    canBeDropped: 1
+    canBeEaten: 1
+    canBeCarried: 1
+    canBeSold: 1
+    canBeBought: 1
+  - itemCode: 1028
+    itemType: 1
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
+    itemPrice: 20
+    itemShopPrice: 25
+    itemDescription: Tomato
+    itemSprite: {fileID: 21300000, guid: 829edba0aa42246a2a95e69096ea5862, type: 3}
+    itemLongDescription: It is a healthy and very useful vegetable. You can use it
+      in almost any recipe.
+    itemUseGridRadius: 2
+    itemUseRadius: 0
+    isStartingItem: 0
+    canBePickedUp: 1
+    canBeDropped: 1
+    canBeEaten: 1
+    canBeCarried: 1
+    canBeSold: 1
+    canBeBought: 1
+  - itemCode: 1029
+    itemType: 1
+    outfit: 2
+    outfitBody: {fileID: 0}
+    outfitArm: {fileID: 0}
+    outfitHair: {fileID: 0}
+    itemPrice: 35
+    itemShopPrice: 50
+    itemDescription: Watermelon
+    itemSprite: {fileID: 21300000, guid: 09de733bd01a24ca6bc8f78192d8f358, type: 3}
+    itemLongDescription: A delicious and juicy fruit with lots of sugar.
+    itemUseGridRadius: 2
+    itemUseRadius: 0
+    isStartingItem: 0
+    canBePickedUp: 1
+    canBeDropped: 1
+    canBeEaten: 1
+    canBeCarried: 1
+    canBeSold: 1
+    canBeBought: 1
+  - itemCode: 1030
+    itemType: 10
+    outfit: 1
+    outfitBody: {fileID: 23192070, guid: e4da43f39ee1848e58729b7a726bbb05, type: 3}
+    outfitArm: {fileID: -1433908395, guid: b25f81d59be7d43cba35974d58452815, type: 3}
+    outfitHair: {fileID: -1665453071, guid: 4e149b0e767fc42668e738ecf9b4fa7c, type: 3}
+    itemPrice: 1000
+    itemShopPrice: 1000
+    itemDescription: FarmerOutfit
+    itemSprite: {fileID: 21300000, guid: 8b19a57b1ffa54b6aa7c724d10f87b3a, type: 3}
+    itemLongDescription: Keeps you warm.
+    itemUseGridRadius: 2
+    itemUseRadius: 0
+    isStartingItem: 0
+    canBePickedUp: 0
+    canBeDropped: 0
+    canBeEaten: 0
+    canBeCarried: 1
+    canBeSold: 1
+    canBeBought: 1
